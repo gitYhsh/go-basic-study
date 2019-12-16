@@ -1,0 +1,8 @@
+hash: abe6e03624ed1cca8dde154c122e594fceb36d6a3971b71d9dec31623e4648fc
+updated: 2019-12-16T22:36:35.0784591+08:00
+imports:
+- name: github.com/bitly/go-simplejson
+  version: aabad6e819789e569bd6aabf444c935aa9ba1e44
+- name: github.com/gin-gonic/gin
+  version: 15ced05c5316609bce5b43389f8e3f06102a8b18
+testImports: []
