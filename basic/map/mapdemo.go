@@ -4,6 +4,14 @@ import (
 	"fmt"
 )
 
+type nodetree struct {
+	value string
+}
+
+func (demo *nodetree) print() {
+	demo.value = "5"
+}
+
 func main() {
 
 	var mapdemo = make(map[string]int, 0)
@@ -27,9 +35,13 @@ func main() {
 		if v, ok := v.(map[string]int); ok {
 			fmt.Println("map集合", v, ok)
 		}
-		if v, ok := v.(string); ok1 {
+		if v, ok := v.(string); ok {
 			fmt.Println("string:", v, ok)
 		}
 	}
+
+	root := nodetree{value: "ceshi"}
+	root.print()
+	fmt.Println(root.value)
 
 }
