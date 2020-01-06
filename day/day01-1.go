@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"reflect"
 )
 
 // 定义一个接口
@@ -21,9 +20,11 @@ type Man struct {
 func (a *Man) getAge() int { // 实现抽象方法1
 	return 18
 }
+func (a *Man) getName() string { // 实现抽象方法1
+	return "zhangsna "
+}
 
 func TestPeople(p interface{}) {
-	fmt.Println(reflect.TypeOf(p))
 	switch p.(type) { // 变量.(type) 只能在 switch 中使用
 	case People:
 
@@ -38,7 +39,8 @@ func TestPeople(p interface{}) {
 }
 
 func main() {
-	man1 := Man{}
+	var tyoe People
+	tyoe = new(Man)
 
-	TestPeople(man1)
+	TestPeople(tyoe)
 }
